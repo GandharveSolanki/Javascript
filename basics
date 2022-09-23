@@ -18,3 +18,60 @@ console.log("hello");
 var myName="Gandharve solanki";
 console.log(myName);
 console.log(typeof(myName));
+
+//some outputs 
+ console.log( 10 + "20"); output will be 1020 how just refer https://www.w3schools.com/js/js_datatypes.asp
+ 
+ see but there is a bug console.log( 9-"5");//the output will be 4 and this is a bug as 10+"20" is concatenating  but 9-"5" is not concatenating .. so no logic just a bug
+ 
+ console.log("Java"+"script");
+ console.log("Java "+"script");
+ but console.log("Java "+        "script"); will prinh java script only if you want more spae just add that space between " "
+ 
+ console.log("vinod"-"thapa"); give Nan which means not a number ..
+ 
+ 
+  console.log(true+true);//the output will be 2.
+  console.log(true+false);//the output will be 1.
+  console.log(false+true);//the output will be 1.
+  console.log(false-true);//the output will be -1.
+
+javascript supports the below 6 data types ..
+Boolean type
+Null type
+Undefined type
+Number type
+BigInt type
+String type
+Symbol type  
+ 
+Differnce between null and undefined?
+// var iAmUseless = null;
+// console.log(iAmUseless); //so null will be the output ..
+// console.log(typeof(iAmUseless));//data type will come out to be object but null isnt a object so this is another bug in the javascript..
+// //2nd javascript bug
+
+// var iAmStandBy;
+// console.log(iAmStandBy);//it will show undefined and once you assign some value to this variable then that undefined goes 
+// console.log(typeof(iAmStandBy));//data type will come out to be undefined 
+
+What is Nan
+In JavaScript, NaN stands for Not a Number. It represents a value which is not a valid number. It can be used to check whether a number entered is a valid number or not a number. 
+
+
+// var myPhoneNumber = 9876543210;
+// var myName = "thapa technical";
+
+// console.log(isNaN(myPhoneNumber));
+// console.log(isNaN(myName));
+
+// if(isNaN(myName)){
+//     console.log("plz enter valid phone no");
+// }
+
+To assign a variable to NaN value, we can use one of the two following ways.
+
+var a = NaN
+var a = Number.NaN
+
+
