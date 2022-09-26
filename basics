@@ -74,4 +74,74 @@ To assign a variable to NaN value, we can use one of the two following ways.
 var a = NaN
 var a = Number.NaN
 
+What will be the output of 3**3? 
+see 3**3 means 3 raised to power 3 which will be 27
+so console.log(3**3) will give us the o/p as 27..
+
+similarly (9**2) will give us the o/p as 81..
+
+
+swap two numbers without using the third variable
+var a=10;
+var b=15;
+a=a+b;
+b=a-b;
+a=a-b;
+console.log("The value of a is "+a);
+console.log("The value of b is "+b);
+
+//differnce between == and === so == only checks the value and === checks the value as well as the type ..
+var a=5;
+var b='5';
+console.log(a==b);
+console.log(a===b);//this will check value as well as data type and 5 and '5' have diff types so we get false..
+
+
+ write a program that works out whether if a given year is a leap year or not?
+ 
+ // var year = 2020;
+// debugger;
+// if(year % 4 === 0){
+//   if(year % 100 === 0){
+//     if(year % 400 === 0){
+//       console.log("The year " + year + " is a leap year");
+//     }else{
+//       console.log("The year " + year + " is not a leap year");
+//     }
+//   }else{
+//     console.log("The year " + year + " is a leap year");
+//   }
+// }else{
+//   console.log("The year " + year + " is not a leap year");
+// }
+
+// we have total 5 falsy values in javascript
+// 👉 0,"",undefined,null,NaN,false** is false anyway
+
+we can use the above in if else and while loop etc 
+like 
+if(false)
+console.log("oopsie");
+else
+console.log("loopsie");
+
+if(undefined)
+console.log("oopsie");
+else
+console.log("loopsie");
+
+if(null)
+console.log("oopsie");
+else
+console.log("loopsie");
+
+
+if(score==0) or if(0)
+console.log("oopsie");
+else
+console.log("loopsie");
+
+
+
+
 
