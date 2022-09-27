@@ -143,5 +143,60 @@ console.log("loopsie");
 
 
 
+var a;
+console.log(typeof(a));
+if(typeof(a))
+console.log("true");
+else
+console.log("false");
+
+//output will be true because typeof(a) will return a string undefined so this is not 0,null,false,"" etc si a finite value so the o/p will be true..
+
+var a=null;
+console.log(typeof(a));
+//type of null is object...
+
+function showmsg(msg)//data type or keyword var is not required when you specify the parameters..
+{
+    alert("hello");
+}
+
+showmsg("hello");
 
 
+function solution(a,b)
+{
+    console.log(a+b);
+}
+
+solution(10,5);
+
+//function returning value
+
+function solution(a,b)
+{
+   return a+b;
+}
+
+var a=solution(10,5);
+console.log(a);
+
+//now see if we pass lesser arguments than required in the function
+
+
+function solution(a,b)
+{
+   return a+b;
+}
+
+var a=solution(10);
+console.log(a);//here the o/p will be Nan as a will get value as 10 but b will get value as undefined ..
+
+but if we do
+function solution(a,b)
+{
+   return a+b;
+}
+
+var a=solution(10,5,9,8);
+console.log(a);// we get op as 15 which we wanted so extra arguments are just ignored//.
