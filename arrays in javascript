@@ -1,0 +1,37 @@
+var arr=[1,2,3,4];
+console.log(arr[3]);
+
+var arr2=new Array(1,2,3,4,5);
+console.log(arr2);
+ var arr3=new Array(3)//this will create an empty array of size 3..
+
+console.log(arr)
+
+console.log(arr[7]);//no index 7 in arr so the o/p will be undefined ...
+arr[7]=19;//insertion will happen at index 7
+console.log(arr);//index 4,5,6 will be empty and index 7 will contain 19..
+
+//arrays in javascript can be hetrogenous ..
+in javascript we have dynamic binding where a variable can have diff types of values..
+
+var arr=[10,"orange",true,20]
+
+also some imp functions of array are
+arr.push()//insert in the end.
+arr.length
+arr.pop()
+arr.shift()
+arr.unshift(anyvalue)//this shifts towards right by one place so for index 0 you should give a value..
+
+//splice function in the array
+
+first parameter is the start index and second parameter is the no of elements you want to delete and the third parameter is the elements you want to add...
+
+var arr=[1,2,3,4];
+arr.splice(1,2,30,50,70);//from index 1 we want to delete 2 element and add 30,50,70
+console.log(arr);
+
+if you do arr.splice(1)//all the elements from index 1 onwards will be deleted...
+
+
+
