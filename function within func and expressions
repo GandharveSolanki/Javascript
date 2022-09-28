@@ -1,0 +1,21 @@
+A function expression is similar to a function declaration, with the difference that it can be stored in a variable. 
+
+var temp=function solution(n){//this is named function expression as the function has a name ...
+    var i=n;
+    return i+1;    //here you can put a recursive statement like solution(n-1)
+}
+
+console.log(temp(5))
+but the statement 
+console.log(solution(6)) will give us error as you just cant use the function solution outside the variable so you can only call the function via the variable..
+
+see if you do console.log(temp) it will give o.p as the function ..
+
+var temp=function(n){//unnamed expression...
+    var i=n;
+    return i+1;    
+}
+
+console.log(temp(5))
+
+//console.log(temp)//then if you see the o/p it will be a function but the name of the function will be temp as you have not given function any name....
