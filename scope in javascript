@@ -1,0 +1,61 @@
+scope refers to the part of the program /region where we can access a variable ..
+
+function solution()
+{
+    var i=10;
+
+}
+console.log(i);
+//the above code will throw reference error as i variable has function scope ;
+var i=10;
+function solution()
+{
+    var i=10;
+
+}
+console.log(i);
+//this time no error as there is a variable i with global scope...
+
+
+var name="kakashi";//this variable has global execution context..
+function solution()
+{
+    var name="hatake";
+    console.log(name);///when interpreter reaches this line it looks for the variable in the current scope which is name="hatake" so it is printed 
+}
+ 
+solution();//function is called and hatake will be printed because 
+console.log(name);
+
+
+execution environment 
+
+the execution environmennt of the function solution will contain
+-->it will contain information related to the variables created in the function 
+--> it will contain 'this'.
+-->it will also contain reference to the outer environment...
+
+
+for the function solution the execution context will be created only when you call that function..
+diff execution contexts will be created when you keep calling the function...
+
+
+so whenever a function is called its execution context is created inside the stack 
+
+consider the eg
+function b()
+{
+console.log("see you");
+} 
+
+function a()
+{
+b();
+console.log("hello")
+}
+ 
+a();
+
+now inside the stack first global context will be created then context for a is created then the context for b is created then b context is over so its popped from 
+stack then after a function call has finished it is also popped from the stack... and this is how this works ..
+
