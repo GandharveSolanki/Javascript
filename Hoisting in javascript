@@ -1,0 +1,82 @@
+let me explain that with example
+
+function solution()
+{
+    console.log(i);
+}
+
+solution();
+
+if you run the above code it will throw reference error as i has not been declared now
+
+see this code 
+
+function solution()
+{
+    console.log(i);
+    var i;
+}
+
+solution();
+
+//the above code doesnt throw any error and the output will be undefined but why it doesnt throw error see in realilty the declartions are moved to the top this is 
+javascript default behavior so in reality the function is interpreted by javascript interpreter like this .
+
+function solution()
+{
+var i;//variable dec moved to the top
+    console.log(i);
+}
+
+solution();
+
+again
+
+function solution()
+{
+    console.log(i);
+    var i=10;
+}
+
+solution();
+
+//this time again no error and the output which is console.log(i) is undefined again but why the output isnt 10 see we said the variable declarations are moved up
+but initialization stays in its correct place so the function is interpreted something like this .. so intilizations are not hoisted...
+
+function solution()
+{
+    var i;
+    console.log(i);
+    i=10;
+}
+
+solution();
+
+
+
+Hoisting is JavaScript's default behavior of moving declarations to the top.
+a variable can be used before it has been declared.
+
+more example of hoisting 
+
+console.log(j);
+var j;
+
+//the above is variable hoisting and we also have function hoisting as well
+
+
+//below is function hoisting ... solution function is declared afterwards but the call is before it so the function declaration are also moved to the top by default..
+solution();
+
+function solution()
+{
+    console.log("hello");
+}
+
+x=5;
+console.log(x);
+var x;
+//the output of the above code will be 5 as declarations moved to top then we got initialization and then the console.log is there ..
+
+//read about the let and const hoist from here https://www.w3schools.com/js/js_hoisting.asp
+thats it
