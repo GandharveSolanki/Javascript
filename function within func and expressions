@@ -19,3 +19,35 @@ var temp=function(n){//unnamed expression...
 console.log(temp(5))
 
 //console.log(temp)//then if you see the o/p it will be a function but the name of the function will be temp as you have not given function any name....
+
+
+//function within function
+function a()
+{
+    console.log("a is printed");
+    function b()
+    {
+        console.log("b is printed");
+    }
+}
+
+a();
+
+//but the statement 
+b() will throw error..
+
+function as aruguments
+var factorial=function fact(n){
+    var ans=1;
+    for(var i=1;i<=n;i++)
+    {
+        ans=ans*i;
+    }
+    return ans;
+};
+
+function ncr(n,r,factorial){
+    return factorial(n)/factorial(r)*factorial(n-r);
+}
+
+console.log(ncr(5,2,factorial));
