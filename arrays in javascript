@@ -33,5 +33,19 @@ console.log(arr);
 
 if you do arr.splice(1)//all the elements from index 1 onwards will be deleted...
 
+//normal iteration you know..
+//for each loop for iterating..
+var arr=["one","two","three","four"];
+function print(ele)
+{
+    console.log(ele);
+}
+arr.forEach(print);
 
+//or you can do something like this ...
 
+var arr=["one","two","three","four"];
+arr.forEach(function print(ele)
+{
+    console.log(ele);
+});
