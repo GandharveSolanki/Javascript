@@ -1,0 +1,168 @@
+javascript is an object oriented language its not a class based object oriented language
+
+you should think of object as key value pairs.. objects help us in wrapping data and functionality together..
+
+var student={}   //this will create an empty object..
+
+var student={name:"abc",rollno:123,marks:195};
+
+objects will have properties like name ,rollno,marks etc you call these properties as key and  they have value ...
+so in object key value pair is mapped.
+the key is always a string in object even if you write number as key it is also converted into a string..
+
+//more cleaner way of writing an object
+var student={
+    name:"abc",
+    rollno:123,
+    marks:195
+ };
+ 
+ 
+ //to access the properties
+ 
+ 
+ console.log(student.name);
+ console.log(student.rollno);
+ 
+ //to change
+ 
+ student.marks=100;
+ 
+ //to add a property
+ 
+ student.sem=10;//you can add key anytime also...
+ 
+ console.log(student);
+ 
+ 
+ you can have value functions as welll..
+ 
+ 
+ //another way of creating an object
+ 
+var obj=new Object();
+
+//square bracket notation
+
+ console.log(student["name"]);
+
+ console.log(student["marks"]);
+ 
+ //so which notation should you use see there are certain cases where the dot notation will not work..
+ 
+ consider this case 
+ 
+ var student={
+    "-name":"abc",
+    rollno:123,
+    marks:195,
+    2:25
+ };
+student.-name wont work and student.2 wont work
+but  console.log(student["-name"]);
+
+ console.log(student["2"]);
+ will work..
+ 
+ //another case in which you wont be able to access the property using the square bracket notation..
+ function print(obj,prop)
+{
+    console.log(obj[prop]);//here obj.prop would not work.
+}
+
+print(student,"marks");
+
+//deleting the properties from the object 
+you can write delete student["marks"] or delete student.marks;
+
+///how are objects stored in the memory..
+
+var obj={
+"p1":10
+};
+
+this variable obj will actually refer to /point to the location where the object is stored in the memory ...
+
+and if i do
+var obj2=obj;//this statement created another variable which is pointing or referring to the same object...so any changes made in the obj object will reflect in the obj2 object as well...
+obj2 will also refer to the same location where the object is stored now..
+
+
+obj1==obj2 and obj1===obj2 these both statements will give us true as locations/address are getting compared and these 2 variables are referring to the same location..
+
+
+//iterating over an object ..
+
+ for(var prop in student)//prop is just variable name you can give any name if you want 
+ {
+    console.log(prop);//or if you want  value as well console.log(prop,student[prop]);
+ }
+
+//another way
+var keys=Object.keys(student);
+
+console.log(keys);
+
+//nested objects
+var student={
+     "name":"abc",
+     rollno:123,
+     marks:195,
+     address:{
+        city:"delhi",
+        pincode:453441
+     }
+ };
+
+
+ console.log(student.address);
+ 
+ console.log(student.address["city"]);
+  console.log(student["address"]["city"]);
+
+javascript arrays is basically objects..
+
+so array have key value pair and keys are the indices.. so all the indices in the array are string..
+
+var arr=[2,3,4,5];
+arr.prop=23;
+console.log(arr);
+console.log(arr.length);//why isnt the lenght 5 see the lenght will be the max integer indice +1..
+if you do arr[10]=15;//here why is arr[10] is working why shouldnt only arr["10"] be allowed see as we know key value pairs and every key is a string so here
+//type conversion is happening which will ensure that 10 is converted to "10". 
+now if you try console.log(arr.length);//now the length will be 11...
+
+//using the for in loop  to iterate the array..
+ for(var i in arr)
+ {
+    console.log(i);//this will iterate over all the keys 
+ }
+
+
+//timing events in javascript..
+
+javascript allows you to run a particular peice of code after certain interval of time..
+
+function sayHello()
+{
+    console.log("hello");
+}
+
+setTimeout(sayHello, 3000);//hello will appear after 3 sec on the terminal you have to just pass the function not do sayHello() this will make a function call which will
+be wrong...
+
+setInterval(sayHello,2000);//this will print hello repeatedly after every 2 secs. and to stop this in vs code terminal we use .
+
+
+
+var sec=1;
+function sayHello()
+{
+    sec++;
+    if(sec==6)
+    clearInterval(id);//at 6 sec the process will stop 
+    console.log("hello");
+}
+
+var id=setInterval(sayHello,2000);//set interval returns an instance which we want to give to the clear interval function because clear interval function
+needs the instance you want to stop...
