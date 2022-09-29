@@ -1,0 +1,48 @@
+dom represents the logical structure of the web page you have (document object model)
+so head ,html div all the elements are the part of the dom so we will be able to manipulate access all the elements using dom so javascript is able to do that using the
+dom ..
+
+see the structure of the dom   diagramatically it loooks like a tree you can see that online 
+
+imp objects in the dom are window ,document ,screen
+document.head, document.body try typing these on the console..
+
+consider a html document and you have created two heading of h1 with one h1 id as one and another h1 heading id as two ..
+
+so you can now play around in the console try doing 
+var heading =document.getElementById("one");//id is unique so this returns a single value only 
+
+heading.style.color="red";
+
+heading.style.backgroundColor="cyan";
+
+var headings=document.getElementsByTagName("h1");//this will fetch all the h1 headings 
+if you want to check how many h1 heading do you have you can just type
+
+headings in the console..
+so i want to change the text of second h1 heading  
+headings[1].innerText="second heading";//the second heading will be at index 1 ..
+
+similarly you can access the elements by their class name ...
+var temp=document.getElementsByClassName('para');//so again this will give us the array of elements which have class as para 
+temp[0].style.backgroundColor="cyan";
+
+you can also access the element by its css selector ..
+
+var heading=document.querySelector('#one');
+
+heading.innerHTML="hello";
+
+//accessing element by using the css class selectors..
+var heading=document.querySelector('.para');//there can be multiple paragraphs with the same class.. so document.querySelector('.para')//so this will return the first
+matching result
+
+//in case if we want all the matching results 
+var para=document.querySelectorAll('.para');//so this will return an array
+
+//event handling..
+
+
+
+
+
