@@ -43,6 +43,29 @@ var para=document.querySelectorAll('.para');//so this will return an array
 //event handling..
 
 
+    <button id="btn">hello</button>
+    lets say we have a button and if it is clicked we want something to happen so we can 
+    use onclick attribute for this 
+    
+    <button id="btn" onclick="alert('hello')">hello</button>
+    
+    //alternate way of doing this ..
+    on console.
+    or in index.js
+    var heading=document.getElementById('btn');
+    now in heading we got our element now we can add event listener to this button 
+    
+    //click is the event i want to handle and second argument is the event handler is the action that needs to be performed if the event takes place so the handler
+    will the function which will have the desired code ...so in the second argument you can write the function name or straight away create a function there .. and pass
 
 
+heading.addEventListener('click',function(){ //add this in javascript  file if you want ..
+    alert("hello");
+});
 
+
+//or function hello()
+     {
+     alert("hello");
+     }
+ heading.addEventListener('click',hello);
