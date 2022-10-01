@@ -1,2 +1,7 @@
 in your javascript file write this "use strict";
 
+https://www.w3schools.com/js/js_strict.asp
+
+//just read the above article try to use strict mode only...
+
+you can apply strict mode to the whole document or to just a single function as well..
