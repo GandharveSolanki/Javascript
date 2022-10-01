@@ -69,3 +69,59 @@ heading.addEventListener('click',function(){ //add this in javascript  file if y
      alert("hello");
      }
  heading.addEventListener('click',hello);
+ //you can add more than one event handler as well.
+ lets say 
+ 
+ function byee()
+ {
+ alert("byee");
+ }
+ heading.addEventListener('click',byee);
+ 
+ 
+ //mouse and keyboard events..
+ 
+ there are many mouse events like click ,mouseover and mouseout  
+ 
+ var outerDiv=document.getElementById("outer");
+ outerDiv.addEventListener('mouseover',function(){ 
+    console.log("mouseover");
+});
+
+ outerDiv.addEventListener('mouseout',function(){ 
+    console.log("mouseout");
+});
+
+//suppose we have an input box with an id of search .. we can add keypress event to it..
+var searchInput=document.getElementById("search");
+ searchInput.addEventListener('keypress',function(){ 
+    console.log("keypressed");
+});
+
+document.addEventListener('keypress',function(){//so now wherever you pressakey in the document you get keypressed written in the console...
+console.log("keypressed");
+});
+
+//but the keypress does not detect up,down,left,right arrows and alt shift tab key etc so if you want to detect these things also so for that you can use the keydown
+event ...
+
+keypress is one keydown and up so basically if you write a character that is keypress now keydown is you pressed the key and keyup is after pressing key it comes up
+
+so keypress ,keydown ,keyup these are all events and keydown will detect right left up down arrows as well 
+ 
+ 
+ document.addEventListener('keydown',function(){
+console.log("keydown");
+});
+
+//in case you want to detect which key is being pressed so for that 
+
+document.addEventListener('keydown',function(event){//so your function should collect the event infact you can collect the event in case of click mouseover etc as well
+console.log("keydown",event.keyCode);//which key has been pressed you can do that using event.keyCode 
+});//event.keyCode will show us the ascii code value..
+
+propagation  of event ..//this is a very important concept  //covered in your notes..
+
+
+
+
