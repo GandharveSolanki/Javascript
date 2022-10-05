@@ -151,7 +151,7 @@ function sayHello()
 setTimeout(sayHello, 3000);//hello will appear after 3 sec on the terminal you have to just pass the function not do sayHello() this will make a function call which will
 be wrong...
 
-setInterval(sayHello,2000);//this will print hello repeatedly after every 2 secs. and to stop this in vs code terminal we use .
+setInterval(sayHello,2000);//this will print hello repeatedly after every 2 secs. and to stop this in vs code terminal we use . ctrl+c
 
 
 
